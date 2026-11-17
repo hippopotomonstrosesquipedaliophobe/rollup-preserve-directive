@@ -16,6 +16,7 @@ const dependencies = packageJson.dependencies;
   'private',
   'dependencies',
   'packageManager',
+  'jja',
 ].forEach(key => delete packageJson[key]);
 const esPrefix = 'es'; // es 前缀
 const cjsPrefix = 'cjs'; // cjs 前缀
@@ -29,11 +30,10 @@ packageJson = {
   types: dtsPrefix + '/index.d.ts', // 旧版本类型入口
   author: {
     name: '泥豆君',
-    email: 'Mr.MudBean@outlook.com',
+    email: 'MudBean@outlook.com',
     url: 'https://mudbean.cn',
   },
   description: '使用 rollup 打包时保留 `use client/server` 指令',
-  sideEffects: false, // 如果是 react 等库包，可能需要使用 ['*.css' ,'*.scss' ,'*.sass', '*.less'] 或其他
   license: 'MIT',
   files: [cjsPrefix, esPrefix, 'LICENSE', 'README.md', 'CHANGELOG.md'],
   exports: {
@@ -48,16 +48,16 @@ packageJson = {
       },
     },
   },
-  keywords: ['rollup-preserve-directive', 'mudbean', 'vvi'],
+  keywords: ['rollup-preserve-directive', 'vvi'],
   homepage: 'https://npms.gleanings.cn/rollup-preserve-directive',
   dependencies: dependencies,
   bugs: {
-    url: 'https://github.com/gleanings/rollup-preserve-directive/issues',
-    email: 'Mr.MudBean@outlook.com',
+    url: 'https://github.com/hippopotomonstrosesquipedaliophobe/rollup-preserve-directive/issues',
+    email: 'MudBean@outlook.com',
   },
   repository: {
     type: 'git',
-    url: 'git+https://github.com/gleanings/rollup-preserve-directive.git',
+    url: 'git+https://github.com/hippopotomonstrosesquipedaliophobe/rollup-preserve-directive.git',
   },
   publishConfig: {
     access: 'public',

@@ -42,8 +42,7 @@ export default {
     cleanup(),
     copy({
       targets: [
-        { src: 'README.md', dest: 'dist' },
-        { src: 'LICENSE', dest: 'dist' },
+        { src: ['README.md', 'LICENSE', 'CHANGELOG.md'], dest: 'dist' },
       ],
     }),
   ],
